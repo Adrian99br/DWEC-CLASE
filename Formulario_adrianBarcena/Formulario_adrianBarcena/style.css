@@ -1,0 +1,66 @@
+.contenedor_formulario{ 
+	border:3px solid brown; 
+	border-radius: 22px; 
+	background-color:#e3d193;
+	padding: 14px; 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  float: right;
+  font-size: 110%;  
+  margin: 2%;
+}
+
+body {   
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: aquamarine;
+}
+
+.body div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px; 
+}
+
+textarea {
+  display: block;
+  margin-top: 10px; 
+}
+
+#texto{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+input, select {
+	padding: 1%;
+  width: 100%;
+	box-sizing: border-box;
+}
+
+input[style*="background-color: red"]::placeholder {
+	color: white;
+	font-weight: bold;
+}
+
+  /* #Nombre, #Apellido1, #Apellido2, #direccion{
+      text-transform: uppercase; /* Poner todo en mayusculas */ 
+  /* } 
+
+  #texto{
+    text-transform: capitalize; /* Poner la primera letra en mayúscula */
+ /* }  */
+
+ 
+        
+        
+        
+       
+         
