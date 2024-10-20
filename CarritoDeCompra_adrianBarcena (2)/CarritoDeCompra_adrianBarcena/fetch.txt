@@ -1,0 +1,48 @@
+import Carrito from './carrito.js';
+
+let misProductos = [];
+let currency;
+
+// Llamada a la API para obtener los productos
+fetch('http://jsonblob.com//api/jsonBlob/1296121091402358784')
+    .then(response => response.json())
+    .catch(error => console.log('Error:', error)) 
+    .finally(() => console.log('Se ha llamado a un servidor'))
+    .then(productos => {
+        cargarProductos(productos);
+    });
+
+// Función para cargar los productos obtenidos de la API
+const cargarProductos = (productos) => {
+    misProductos = productos.products;
+    currency = productos.currency;
+    console.log(`La moneda es: ${currency}`);
+    console.log(misProductos);
+    // Inicializar el carrito con los productos obtenidos
+    const carrito = new Carrito(misProductos);
+    actualizarCarrito(carrito);
+};
+
+// Actualizar la interfaz gráfica
+function actualizarCarrito(carrito) {
+    carrito.actualizarUI();
+}
+
+// Añadir eventos a los botones para incrementar y decrementar cantidades
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('plus')) {
+        const productId = parseInt(event.target.dataset.id);
+        const producto = carrito.obtenerInformacion(productId);
+        carrito.actualizarUnidades(productId, producto.cantidad + 1);
+        actualizarCarrito(carrito);
+    }
+
+    if (event.target.classList.contains('minus')) {
+        const productId = parseInt(event.target.dataset.id);
+        const producto = carrito.obtenerInformacion(productId);
+        if (producto.cantidad > 0) {
+            carrito.actualizarUnidades(productId, producto.cantidad - 1);
+            actualizarCarrito(carrito);
+        }
+    }
+});
