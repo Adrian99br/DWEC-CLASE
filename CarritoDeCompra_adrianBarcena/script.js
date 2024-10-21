@@ -29,10 +29,12 @@ function cargaProductos(coleccionProductos) {
             plusButton.innerText = '+';
 
             const inputCantidad = document.createElement('input');
-            inputCantidad.type = 'number';
+            inputCantidad.type = 'text';
             inputCantidad.id = `quantity-${producto.ref}`;  
+            inputCantidad.classList.add('input-cantidad');
             inputCantidad.value = producto.cantidad;
             inputCantidad.min = 0; 
+            
 
             // Agregar los botones y el input a la celda de cantidad
             cantidadCelda.appendChild(minusButton);
