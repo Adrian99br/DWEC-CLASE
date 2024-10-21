@@ -79,6 +79,23 @@ button {
     position: relative;
 }
 
+@media (max-width: 768px) { /*https://tekla.io/blog/como-hacer-una-web-responsive-guia-completa/*/
+    .container_1 {
+        width: 100%;  /* El container 1 ocupa el 100% del ancho */
+        float: none;  /* Eliminar el flotado para que se comporte de manera normal en el flujo del documento */
+        position: relative; /* Asegurar que su posición sea relativa en el flujo normal */
+    }
+
+    .container_2 {
+        width: 100%;  /* El container 2 ocupa el 100% del ancho */
+        float: none;  /* Eliminar el flotado */
+        margin-top: 20px;  /* Añadir margen superior para que quede separado de container_1 */
+        position: relative; /* Asegurar que no esté en posición absoluta */
+    }
+}
+
+
+
 /* Estilos específicos para los inputs de tipo number */
 input[type="number"] {
     width: 50px; 
