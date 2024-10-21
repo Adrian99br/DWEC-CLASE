@@ -1,0 +1,102 @@
+/* Estilos del carrito */
+.carrito {
+    text-align: left; 
+    color: rgb(0, 38, 255); 
+    background-color: rgb(196, 233, 255); 
+    margin-left: auto; 
+    margin-right: auto; 
+    left: 20vw; 
+    border: 2px solid blue; 
+    display: inline-block; /* Mantener el tamaño del contenido y permitir otros elementos en línea */
+    padding: 10px; 
+    border-radius: 10px; 
+}
+
+/* Estilo body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    margin: 0 auto; /* Centrado horizontalmente */
+    padding: 20px; 
+}
+
+/* Estilos para los encabezados h1 y h2 */
+h1, h2 {
+    text-align: center; 
+}
+
+/* Estilos para las tablas */
+table {
+    width: 100%; 
+    border-collapse: collapse; /* Eliminar espacio entre las celdas */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+}
+
+/* Estilos para la tabla, celdas de encabezado y celdas de cuerpo */
+table, th, td {
+    border: 1px solid #ddd; 
+    padding: 12px; 
+    text-align: center; 
+}
+
+/* Estilos para los botones */
+button {
+    padding: 5px 10px; /* Espaciado interno: 5px entre arriba y abajo, 10px entre izquierda y derecha */
+    margin: 0 5px; /* Margen horizontal de 5px */
+}
+
+/* Estilo total final */
+#final_total {
+    font-size: 1.5em; 
+    color: #333; 
+}
+
+/* Estilos container_1 */
+.container_1 {
+    border-radius: 100pt; 
+    width: 90%; 
+    max-width: 1000px; 
+    margin: 20px auto; 
+    text-align: right; 
+    float: left; 
+    flex-direction: row-reverse; /* ordenar los elementos en el espacio de derecha a izquierda*/
+}
+
+/* Estilos para otro contenedor de clase container_2 */
+.container_2 {
+    border-radius: 5pt; 
+    width: 30%; 
+    padding: 20px; 
+    margin: 20px; 
+    box-sizing: border-box;
+    text-align: left;
+    float: right; 
+    background-color: rgb(189, 186, 186); 
+    flex-direction: row-reverse; 
+}
+
+/* Estilos específicos para los inputs de tipo number */
+input[type="number"] {
+    width: 50px; 
+    height: 50px; 
+    text-align: center; 
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    /* background-color: #f9f9f9; */
+    line-height: 50px; /* Altura de línea para centrar el contenido verticalmente */
+    padding-left: 5px; /* Espaciado a la izquierda */
+    padding-right: 0; /* Sin espaciado a la derecha */
+}
+
+/* Estilos específicos para los botones de clase plus y minus */
+button.plus, button.minus {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 1.5em; /* Fuente grande */
+    cursor: pointer; /* Aparece el puntero en modo "clickable" */
+}
+
+    
+    
+
