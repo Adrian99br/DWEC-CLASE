@@ -5,12 +5,14 @@
     background-color: rgb(196, 233, 255); 
     margin-left: auto; 
     margin-right: auto; 
-    left: 20vw; 
     border: 2px solid blue; 
     display: inline-block; /* Mantener el tamaño del contenido y permitir otros elementos en línea */
     padding: 10px; 
     border-radius: 10px; 
-}
+    left: 10%; 
+    right: 10%; 
+    width: 50%;
+ }
 
 /* Estilo body */
 body {
@@ -60,6 +62,7 @@ button {
     text-align: right; 
     float: left; 
     flex-direction: row-reverse; /* ordenar los elementos en el espacio de derecha a izquierda*/
+    position: absolute;
 }
 
 /* Estilos para otro contenedor de clase container_2 */
@@ -73,6 +76,7 @@ button {
     float: right; 
     background-color: rgb(189, 186, 186); 
     flex-direction: row-reverse; 
+    position: relative;
 }
 
 /* Estilos específicos para los inputs de tipo number */
@@ -110,7 +114,20 @@ button.plus, button.minus {
     cursor: pointer; /* Aparece el puntero en modo "clickable" */
 }
 
+/* Estilos específicos para la clase */
+.copyright {
+    text-align: center;
+    position: fixed; /* Para mantener el footer siempre visible en la parte inferior */
+    bottom: 0; /* Lo fija en la parte inferior */
+    width: 100%; /* Hace que ocupe todo el ancho del viewport */
+    padding: 10px;
+}
 
-   
+
+
+
+
+
+
     
 
