@@ -1,0 +1,46 @@
+<div class="blog-container">
+  <!-- Formulario -->
+  <section class="blog">
+    <div class="contenedorblog">
+        <div>
+            <label for="tituloBlog">Titulo: </label>
+            <input type="text" name="tituloBlog" id="tituloBlog" placeholder="Introduzca el Nombre del blog" [(ngModel)] = "newBlog.titulo">
+        </div>
+        <br>
+        <hr>
+        <div>
+            <label for="imagenBlog">Imagen: </label>
+            <input type="url" id="url" name="url" placeholder="Introduce la url de la imagen" [(ngModel)] = "newBlog.url"/>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <label for="textoBlog">Texto: </label>
+            <textarea cols="35" rows="10" wrap="hard" id="texto" name="texto" placeholder="Introduce el texto del blog:" [(ngModel)] = "newBlog.texto"></textarea>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <label for="fechaBlog">Fecha:</label>
+            <input type="datetime-local" name="datetime" id="datetime" placeholder="Introduce la fecha en la que se publica el blog:" [(ngModel)] = "newBlog.fecha"/>
+        </div>
+        <br>
+        <hr>
+        <button class="mybutton" (click)="publicarBlog()">Publicar Blog</button>
+    </div>
+
+    <hr><br>
+        <div class="navder" id="listadoBlog" >
+            @for (noticia of arrBlog; track noticia.id) {
+                <div class="elementosDerecha">
+                    <img class="img-fluid" src={{noticia.url}} alt="imagen">
+                    <h2>{{noticia.titulo}}</h2>
+                    <p>{{noticia.texto}}</p>
+                    <p>{{noticia.fecha}}</p>
+                </div>
+            }
+        </div>
+
+    </section>
+
+
