@@ -1,0 +1,18 @@
+<div class="card mb-3">
+  <div class="row g-0">
+      <div class="col-md-4">
+          <img [src]="miUser.image" class="img-fluid rounded-start" [alt]="miUser.image">
+      </div>
+      <div class="col-md-8">
+          <div class="card-body">
+              <h5 class="card-title">{{miUser.username}}</h5>
+              <p class="card-text">{{miUser.email}}</p>
+              <p class="card-text"><small class="text-body-secondary">{{miUser.password}}</small></p>
+              <app-boton-componente [parent]="'card'" [miId]="miUser._id"></app-boton-componente>
+
+
+          </div>
+      </div>
+  </div>
+</div>
+

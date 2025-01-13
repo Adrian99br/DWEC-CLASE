@@ -1,0 +1,8 @@
+<a [routerLink] = "['/newuser']" class="btn btn-success mb-3">Nueva persona</a>
+<div class="row">
+    @for(persona of arrUser; track persona._id){
+        <article class="col-12 col-md-6 col-sd-3">
+            <app-act-componente [miUser]="persona"></app-act-componente>
+        </article>
+    }
+</div>

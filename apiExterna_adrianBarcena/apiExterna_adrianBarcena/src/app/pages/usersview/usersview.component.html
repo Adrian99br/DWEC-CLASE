@@ -1,0 +1,18 @@
+<section class="container mt-3">
+  <div class="card shadow p-3">
+      <div class="row">
+          <figure class="col-12 col-md-3">
+              <img class="img-fluid" [src]="miUser.image" [alt]="miUser.image">
+          </figure>
+          <div class="col-12 col-md-9">
+              <h2>{{miUser.first_name}}</h2>
+              <hr>
+              <p>Nombre: {{miUser.first_name}}</p>
+              <p>Apellido: {{miUser.last_name}}</p>
+              <p>USUARIO: {{miUser.username}}</p>
+              <p>EMAIL: {{miUser.email}}</p>
+              <app-boton-componente [parent]="'card'" [miId]="miUser._id"></app-boton-componente>
+          </div>
+      </div>
+  </div>
+</section>
